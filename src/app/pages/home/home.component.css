@@ -1,0 +1,30 @@
+.home{
+    color: #AB9AD9;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "playing fila"
+    "peaple fila";
+}
+
+.fila-header{
+    grid-area: header;
+    font-size: 60px;
+    align-items: center;
+    margin: 5rem;
+}
+
+.logo {
+    text-align: center;
+}
+app-card-playing{
+    grid-area: playing;
+}
+
+app-card-fila{
+    grid-area: fila;
+}
+
+app-card-pessoas{
+    grid-area: peaple;
+}
