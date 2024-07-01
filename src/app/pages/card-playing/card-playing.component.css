@@ -1,0 +1,30 @@
+.topo_card {
+    font-size: 35px;
+}
+.playing {
+    display: flex;
+    font-size: 20px;
+    background-color: #7360AB;
+    width: 1fr;
+    height: 200px;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.det {
+    color: #AB9AD9;
+    margin-top: 10px;
+}
+iframe {
+  width: 220px;
+  height: 150px;
+}
+
+.flex {
+    margin: 10px;
+}

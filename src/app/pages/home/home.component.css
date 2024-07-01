@@ -5,6 +5,9 @@
     "header header"
     "playing fila"
     "peaple fila";
+    margin-left: 100px;
+    margin-right: 100px;
+    grid-template-columns: 40% 60%;
 }
 
 .fila-header{
