@@ -22,7 +22,7 @@ import { IVideo } from '../../shared/models/videos';
 })
 export class HomeComponent implements OnInit{
   videos!: IVideo[]
-  requestVideo = new RequestVideo("AIzaSyBgliuzy_VqjnYAHmwPlYY9E68qoZDdwQ4", "snippet", "PLESrnPp1eqbUkUvycvjnFk6WkMDVv7t6v");
+  requestVideo = new RequestVideo("", "snippet", "PLESrnPp1eqbUkUvycvjnFk6WkMDVv7t6v");
   constructor(private readonly youtubeService: YoutubeService){}
 
   ngOnInit(): void {
