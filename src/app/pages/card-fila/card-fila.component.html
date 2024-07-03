@@ -1,0 +1,7 @@
+<div class="topo_card">Fila:</div>
+<div class="fila">
+  <div class="video" *ngFor="let video of videos">
+    <div class="titulo">{{ video.snippet.title }}</div>
+    <img [src]="video.snippet.thumbnails.default.url" alt=""/>
+  </div>
+</div> 
