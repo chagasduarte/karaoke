@@ -12,9 +12,9 @@
 
 .fila-header{
     grid-area: header;
-    font-size: 60px;
+    font-size: 50px;
     align-items: center;
-    margin: 5rem;
+    margin: 3rem;
 }
 
 .logo {
@@ -26,6 +26,8 @@ app-card-playing{
 
 app-card-fila{
     grid-area: fila;
+    margin-left: 5%;
+
 }
 
 app-card-pessoas{

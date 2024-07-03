@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
+import { IVideo } from '../../shared/models/videos';
 
 @Component({
   selector: 'app-card-fila',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './card-fila.component.html',
   styleUrl: './card-fila.component.css'
 })
-export class CardFilaComponent {
+export class CardFilaComponent{
+  
+  @Input() videos: IVideo[] = [];
 
 }

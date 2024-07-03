@@ -1,0 +1,25 @@
+.fila {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, max(350px, 80%/2)), 1fr));
+    background-color: #7360AB;
+    align-self: center;
+}
+
+.video {
+    background-color: aliceblue;
+    color: black;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.video img {
+    width: 150px;
+    height: 61%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.titulo {
+    height: 35%;
+    margin: 3px;
+}
