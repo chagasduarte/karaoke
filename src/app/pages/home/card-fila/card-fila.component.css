@@ -3,6 +3,7 @@
     grid-template-columns: repeat(auto-fit, minmax(min(150px, max(350px, 80%/2)), 1fr));
     background-color: #7360AB;
     align-self: center;
+    border-radius: 5px;
 }
 
 .video {
@@ -10,6 +11,7 @@
     color: black;
     width: 150px;
     height: 150px;
+    margin: 10px;
     border-radius: 8px;
 }
 

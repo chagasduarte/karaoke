@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IVideo } from '../../../shared/models/videos';
 
 @Component({
   selector: 'app-card-playing',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
   templateUrl: './card-playing.component.html',
   styleUrl: './card-playing.component.css'
 })
-export class CardPlayingComponent {
+export class CardPlayingComponent{
+
+  @Input() video!: IVideo;
 
 }

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { IVideo } from '../../shared/models/videos';
+import { IVideo } from '../../../shared/models/videos';
 
 @Component({
   selector: 'app-card-fila',
