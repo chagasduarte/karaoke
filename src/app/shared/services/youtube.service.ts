@@ -30,4 +30,8 @@ export class YoutubeService {
     return this.http.get<IPlayList>(`${this.request.youtubeApi}/playlistItems?`+ opcoes.join("&"));
   }
 
+  getVideos(){
+    
+  }
+
 }
