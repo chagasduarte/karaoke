@@ -28,4 +28,4 @@ jobs:
       - name: Pull image from dockerhuhb
         run: docker pull chagasduarte/karaoke-ui:latest
       - name: run docker container
-        run: docker run -d -p 80:4200 --name karaoke-ui chagasduarte/karaoke-ui
+        run: docker run -d -p 8080:8080 --name karaoke-ui chagasduarte/karaoke-ui
