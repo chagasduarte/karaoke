@@ -7,19 +7,16 @@ jobs:
   Deploy-Remotely:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js 20.14.0 to Build
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 20.14.0
-    - run: npm install --force
+    - run: npm install
     - run: CI=false npm run build
-    - name: Transfer Build Folder on EC2 Instance
-      uses: easingthemes/ssh-deploy@v2.1.4
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
-        REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
-        REMOTE_USER: ${{ secrets.DEPLOY_USER }}
-        REMOTE_PORT: ${{ secrets.DEPLOY_PORT }}
-        SOURCE: "build/"
-        TARGET: ${{ secrets.DEPLOY_TARGET }}
+    - name: Login no DockerHub
+      run: docker login -u ${{ secrets.DOCKERHUB_USER }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
+    - name: Build docker image
+      run: docker build -t chagasduarte/karaoke-ui .
+    - name: Push image Docker
+      run: docker push chagasduarte/karaoke-ui
