@@ -1,8 +1,9 @@
 /* /// You can add global styles to this file, and also import other style files */
 body{
-    background-color: #0D235C;
-    width: 95vw;
-    height: 95vh;
+    background-color: #152325;
+    width: 99vw;
+    height: 99vh;
+    overflow: hidden;
 } 
 
 img{
@@ -18,5 +19,4 @@ img{
 
 button{
     border-radius: 5px;
-    
 }
