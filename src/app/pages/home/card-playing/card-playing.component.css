@@ -22,3 +22,7 @@
 .flex {
     margin: 10px;
 }
+
+.jogador{
+    border-radius: 50px;
+}

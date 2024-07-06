@@ -6,7 +6,7 @@
     "karaoke": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
+      "root": "src",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -21,10 +21,9 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "./src/assets",
+              "./src/assets/img",
+              "./src/assets/settings"
             ],
             "styles": [
               "src/styles.css"

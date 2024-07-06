@@ -1,9 +1,14 @@
 <section class="home">
-    <div class="fila-header">
-       <div class="logo">Karaokê</div>
+    <div class="fila-header">  
+      <div class="logo">
+        <img src="assets/img/logo-karaoke.svg" alt="">
+        <p>Karaokê</p>
+      </div>
     </div>
-    <app-card-playing [video]="video"></app-card-playing>
-    <app-card-pessoas></app-card-pessoas>
-    <app-card-fila [videos]="videos"></app-card-fila>   
+    <div class="corpo">
+        <app-card-playing></app-card-playing>
+        <app-card-pessoas></app-card-pessoas>
+        <app-card-fila></app-card-fila>   
+    </div>
 </section>
 

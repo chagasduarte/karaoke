@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { AppConfigService } from './declare/app-config.service';
 import { Config } from '../models/config';
-import { appConfig } from "../../../assets/config/appConfig.json"
+import { appConfig } from "../../../assets/settings/appConfig.json"
 
 @Injectable({
   providedIn: 'root'
 })
-export class ConfigService implements AppConfigService {
+export class ConfigService{
   get(): Config {
     return appConfig;
   }

@@ -3,10 +3,10 @@ import { CardFilaComponent } from "./card-fila/card-fila.component";
 import { CardPessoasComponent } from './card-pessoas/card-pessoas.component';
 import { CardPlayingComponent } from './card-playing/card-playing.component';
 import { YoutubeService } from '../../shared/services/youtube.service';
-import { RequestVideo } from '../../shared/models/videoRequest';
-import { IPlayList } from '../../shared/models/playList';
+import { RequestVideo } from '../../shared/models/playlist/videoRequest';
+import { IPlayList } from '../../shared/models/playlist/playList';
 import { CommonModule } from '@angular/common';
-import { IVideo } from '../../shared/models/videos';
+import { IVideo } from '../../shared/models/playlist/videos';
 
 @Component({
     selector: 'app-home',
@@ -20,20 +20,6 @@ import { IVideo } from '../../shared/models/videos';
       CommonModule
     ]
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent{
 
-  videos!: IVideo[];
-  video!: IVideo;
-
-  constructor(private readonly youtubeService: YoutubeService){}
-
-  ngOnInit(): void {
-    this.youtubeService.getPlayList().subscribe({
-      next: (success: IPlayList) => {
-        this.videos = success.items;
-        this.video = success.items[0];
-      }
-    });
-  }
-   
 }

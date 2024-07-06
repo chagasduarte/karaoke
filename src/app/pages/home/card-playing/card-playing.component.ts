@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IVideo } from '../../../shared/models/videos';
+import { IVideo } from '../../../shared/models/playlist/videos';
 
 @Component({
   selector: 'app-card-playing',

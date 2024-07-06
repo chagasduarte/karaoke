@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RequestVideo } from '../models/videoRequest';
-import { IPlayList } from '../models/playList';
+import { IPlayList } from '../models/playlist/playList';
 import { Config } from '../models/config';
+import { IVideo } from '../models/playlist/videos';
 import { ConfigService } from './config.service';
 
 @Injectable({
@@ -30,8 +30,14 @@ export class YoutubeService {
     return this.http.get<IPlayList>(`${this.request.youtubeApi}/playlistItems?`+ opcoes.join("&"));
   }
 
-  getVideos(){
+  getVideos(query: string ): Observable<IPlayList>{
+    const opcoes: string[] = [];
+    opcoes.push("key="+this.request.key);
+    opcoes.push("part="+this.request.part);
+    opcoes.push("maxResults=9");
+    opcoes.push(`q=${query} karaoke`);
     
+    return this.http.get<IPlayList>(`${this.request.youtubeApi}/search?`+ opcoes.join("&"));
   }
 
 }

@@ -1,12 +1,13 @@
 .home{
-    color: #AB9AD9;
+    color: #ffffff;
+}
+.corpo{
+    margin: 100px;
     display: grid;
     grid-template-areas: 
     "header header"
     "playing fila"
     "peaple fila";
-    margin-left: 100px;
-    margin-right: 100px;
     grid-template-columns: 40% 60%;
 }
 
@@ -14,11 +15,18 @@
     grid-area: header;
     font-size: 50px;
     align-items: center;
-    margin: 3rem;
+    width: 1fr;
+    background-color: #426d7a;
 }
 
 .logo {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
 }
 app-card-playing{
     grid-area: playing;

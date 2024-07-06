@@ -1,4 +1,8 @@
-<div class="topo_card">Fila:</div>
+<div class="flex">
+  <input type="text" class="input_busca" name="busca" id="buscar" [(ngModel)]="busca" />
+  <button class="btn" (click)="searchVideo()">Buscar</button>
+</div>
+
 <div class="fila">
   <div class="video" *ngFor="let video of videos">
     <div class="titulo">{{ video.snippet.title }}</div>
