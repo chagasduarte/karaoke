@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js 20.14.0 to Build
+    - name: Use Node.js 18 to Build
       uses: actions/setup-node@v4
       with:
-        node-version: 20.14.0
+        node-version: 18
     - run: npm install
     - run: CI=false npm run build
     - name: Login no DockerHub
