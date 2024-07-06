@@ -1,8 +1,8 @@
 { 
-    "appConfig": {
-                    "youtubeApi":"https://www.googleapis.com/youtube/v3",
-                    "key": "AIzaSyBgliuzy_VqjnYAHmwPlYY9E68qoZDdwQ4",
-                    "listId": "PLESrnPp1eqbUkUvycvjnFk6WkMDVv7t6v",
-                    "part": "snippet"
-                }
+    "appConfig":{
+        "youtubeApi":"https://www.googleapis.com/youtube/v3",
+        "key": "AIzaSyBgliuzy_VqjnYAHmwPlYY9E68qoZDdwQ4",
+        "listId": "PLESrnPp1eqbUkUvycvjnFk6WkMDVv7t6v",
+        "part": "snippet"
+    }            
 }
