@@ -4,7 +4,7 @@ on:
     branches: [ main ]
  
 jobs:
-  Deploy-Remotely:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -20,3 +20,12 @@ jobs:
       run: docker build -t chagasduarte/karaoke-ui .
     - name: Push image Docker
       run: docker push chagasduarte/karaoke-ui
+  
+  deploy: 
+    needs: build
+    runs-on: self-hosted
+    steps: 
+      - name: Pull image from dockerhuhb
+        run: docker pull chagasduarte/karaoke-ui:latest
+      - name: run docker container
+        run: docker run -d -p 4200:4200 --name karaoke-ui chagasduarte/karaoke-ui
